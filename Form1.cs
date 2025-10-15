@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +12,26 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        String userPassword = "Soccer#10";
+        String userUsername = "rpugh777";
+        String username = "";
+        String password = "";
         public Form1()
         {
             InitializeComponent();
-            String userPassword = "Soccer#10";
-            String userUsername = "rpugh777";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (username.Equals(userUsername) && password.Equals(userPassword))
+            {
+                MessageBox.Show("Signed in!");
+            }
+            else
+            {
+                MessageBox.Show("Incorrect login information");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,12 +41,12 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            String password = textBox2.Text;
+             password = textBox2.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            String username = textBox1.Text;
+            username = textBox1.Text;
         }
 
         private void label2_Click(object sender, EventArgs e)
